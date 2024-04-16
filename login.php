@@ -11,9 +11,9 @@
         <h1>Login</h1>
         <form action="/login" method="post">
             <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="foulan.foulani@gmail.com" required><br>
+            <input type="email" id="email" name="email" placeholder="foulan.foulani@gmail.com" required ><br>
             <label for="password">Mot de Passe</label><br>
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" id="password" name="password" required ><br>
             <input type="checkbox" id="remember-me" name="remember-me">
             <label for="remember-me">Remember me</label><br>
             <input type="submit" value="Login"><br>
