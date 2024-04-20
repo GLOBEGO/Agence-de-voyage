@@ -6,7 +6,7 @@ function check() {
     if(confmot != mot){
         msg.textContent = "mot de passe incompatible";
         msg.style.backgroundColor = "#ff4500";
-        msg.style.color = "#0000";
+        msg.style.color = "#FFFFFF";
         
     }
 }
