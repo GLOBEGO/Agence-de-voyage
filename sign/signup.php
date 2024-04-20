@@ -23,7 +23,7 @@
             <label for="conf">Confirmer Mot de Passe</label>
             <input type="password" id="conf" name="conf" required >
             <input type="submit" value="Sign UP"><br>
-            <a href="login.php">already have an account ?</a><br>
+            <a href="../login/login.php">already have an account ?</a><br>
         </form>
     </div>
 </body>

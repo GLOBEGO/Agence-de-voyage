@@ -18,7 +18,7 @@
             <label for="remember-me">Remember me</label><br>
             <input type="submit" value="Login"><br>
             <a href="#">Oublie Mot de Passe?</a><br>
-            <p>Don't have an account? <a href="signup.php">Sign up</a></p>
+            <p>Don't have an account? <a href="../sign/signup.php">Sign up</a></p>
         </form>
     </div>
 </body>
