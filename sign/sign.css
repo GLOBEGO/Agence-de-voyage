@@ -30,7 +30,7 @@ body{
 }
 
 
-.sign-box input[type="submit"] {
+.sign-box button {
   width: 100%;
   padding: 10px;
   background-color: #4CAF50;
@@ -41,7 +41,7 @@ body{
   margin-top: 10px;
 }
 
-.sign-box input[type="submit"]:hover {
+.sign-box button:hover {
   background-color: #45a049;
 }
 
@@ -55,4 +55,9 @@ body{
 
 .sign-box a:hover {
   text-decoration: underline;
+}
+.sign-box p {
+  margin: 7.5px 0;
+  display: inline-block;
+  padding: 5px 20px;
 }
