@@ -9,4 +9,9 @@ function check() {
         msg.style.color = "#FFFFFF";
         
     }
+    else{
+        msg.textContent = "mot de passe compatible";
+        msg.style.backgroundColor = "#62ce66";
+        msg.style.color = "#FFFFFF";
+    }
 }
