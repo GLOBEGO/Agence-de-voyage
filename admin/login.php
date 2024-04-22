@@ -6,22 +6,15 @@ include ("functions.php");
 
 <?php
 session_start();
-$user= true;
-if (isset($_SESSION['Name'])){
 
-    
-}
-
-$user = true;
 if (!empty($_POST)){ // click sur le button sauvgarder
 $user = connectadmin($_POST);
 if( is_array ($user)&&count($user) > 0 ){ // utilisateur connectee
 Session_start();
-$_SESSION['Name'] = $user['Name'];
-$_SESSION['email'] = $user['email'];
+$_SESSION['username'] = $user['username'];
 $_SESSION['password'] = $user['password'];
 
-header('location:home.php'); // redirection vers la page profile
+header('location:home.php'); // redirection vers la page home
 }
 }
 
