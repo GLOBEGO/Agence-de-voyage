@@ -28,7 +28,7 @@
             <input type="password" id="conf" name="conf" required oninput="return check()" >
             <p id="msg"></p><br>
             <input type="submit" value="Sign Up" id="sub"><br>
-            <a href="../login/login.html">already have an account ?</a><br>
+            <a href="../login/login.php">already have an account ?</a><br>
             <script src="sign.js"></script>
         </form>
     </div>
