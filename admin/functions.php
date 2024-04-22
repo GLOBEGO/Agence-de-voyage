@@ -19,14 +19,21 @@ function connectadmin($data){
   // Connexion à la base de données
   $conn=connect();
 
-$name = $data['Name'];
+$name = $data['username'];
 $password = md5($data['password']);
 $requette = "SELECT * FROM adminis WHERE Name='$name' AND password='$password'";
 
 $resultat = $conn->query($requette);
-$user = $resultat->fetch_assoc();
-return $user;
-
+if($resultat->rowcount()>0){
+  if ($donnees = $resultat->fetch()){
+    if($donnees['username']=="globego"){
+      header('location:home.php');
+    }
+    else {
+      echo"slm";
+    }
+  }
+}
 }
 
 
