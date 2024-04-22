@@ -11,7 +11,7 @@
             <a href="home.php">
                 <!-- Icône et titre pour le tableau de bord -->
                 <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
-                <span class="title">Home</span>
+                <span class="title">globe go</span>
             </a>
         </li>
         <li>
