@@ -1,7 +1,7 @@
 <?php
 function connect(){
     // Connexion à la base de données
-    $conn = new mysqli('localhost', 'root', '', 'agence_de_voyage',3307);
+    $conn = new mysqli('localhost', 'root', '', 'agence_de_voyage');
 
     // Vérification de la connexion
     if ($conn->connect_error) {
@@ -127,4 +127,13 @@ $nbclient= $resultat ->fetch_all();
       return $client;
       }
       
-
+      function ajoutClient($data){
+        $conn = connect();
+        $req = "INSERT INTO users(nom,prenom,sexe,email,phone,mp) VALUES('".$data['nom']."','".$data['prenom']."','".$data['sexe']."','".$data['email']."','".$data['tel']."','".$data['conf']."')";
+        $res = $conn->query($req);
+        if ($res){
+          return true;
+        }
+        else{
+          return false;}
+        }

@@ -7,9 +7,16 @@
     <title>Sign UP</title>
 </head>    
 <body>
+    <?php
+    include "../admin/functions.php";
+    if (!empty($_POST)){
+        ajoutClient($_POST);
+    }
+
+    ?>
     <div class="sign-box">
         <h1>Sign Up</h1>
-        <form action="signup.php" method="post">
+        <form action="signup.php" method="post" onsubmit="return checksubmit()">
             <div class="sexe"><label for="M">MR</label>
             <input type="radio" id="M" name="sexe" value="M">
             <label for="F">MRS</label>
@@ -19,7 +26,7 @@
             <label for="prenom">Prenom</label>
             <input type="text" name="prenom" id="prenom" required >
             <label for="tel">Tel</label>
-            <input type="text" name="tel" id="tel" maxlength="10" required pattern="[0-9]{8}"><br>
+            <input type="text" name="tel" id="tel" maxlength="8" pattern="[0-9]{8}"><br>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="foulan.foulani@gmail.com" required ><br>
             <label for="password">Mot de passe</label><br>

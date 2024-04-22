@@ -1,3 +1,11 @@
+function checksubmit(){
+    var option=document.getElementsByName('sexe');
+    if (!(option[0].checked || option[1].checked)) {
+        alert("choisir votre sexe");
+        return false;
+    }
+
+}
 function check(){
     const mot = document.getElementById("password").value;
     const confmot = document.getElementById("conf").value;
