@@ -7,9 +7,19 @@
     <title>Login</title>
 </head>    
 <body>
+    <?php
+        $user = false;
+        include "../admin/functions.php";
+        if(!empty($_POST)){
+            $user = connectuser($_POST);
+            if(count($user)>0){
+                header('Location: ../index/index.html');
+        }
+    }
+    ?>
     <div class="login-box">
         <h1>Login</h1>
-        <form action="/login" method="post">
+        <form action="login.php" method="post">
             <label for="email">Email</label><br>
             <input type="email" id="email" name="email" placeholder="foulan.foulani@gmail.com" required ><br>
             <label for="password">Mot de Passe</label><br>

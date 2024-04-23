@@ -137,3 +137,14 @@ $nbclient= $resultat ->fetch_all();
         else{
           return false;}
         }
+      function connectuser($data){
+        $conn=connect();
+
+        $email = $data['email'];
+        $password = $data['password'];
+        $requette = "SELECT * FROM users WHERE email='$email' AND mp='$password'";
+
+        $resultat = $conn->query($requette);
+        $user =  $resultat->fetch_all();
+        return $user;
+      }
