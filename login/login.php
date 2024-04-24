@@ -13,7 +13,7 @@
         if(!empty($_POST)){
             $user = connectuser($_POST);
             if(count($user)>0){
-                header('Location: ../index/index.html');
+                header('Location: ../home/home.html');
         }
         if(!$user){
            $error = "mot de passe ou email invalide";
