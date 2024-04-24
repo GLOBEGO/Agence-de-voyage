@@ -11,9 +11,9 @@
         <p>Saisissez l'adresse électronique que vous avez utilisée pour créer votre compte 
          et nous vous enverrons un courrier électronique contenant des instructions 
          sur la manière de générer votre nouveau mot de passe.</p><br>
-        <label for="email">Email</label><br>
+        <label for="email" style="font-weight: bold;">Email:</label><br>
         <input type="email" name="email" id="email"><br>
-        <button type="submit">Envoyer</button><br>
+        <input type="submit" value="Envoyer"></button><br>
 
 
     </div>
