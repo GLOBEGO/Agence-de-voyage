@@ -70,18 +70,7 @@
 
         <button onclick="myFunction()" id="myBtn">Read more</button> 
         <h3>Vol</h3>
-        <div class="row1">
-          <div class="column1" >
-            <h2>Classe economique</h2>
-            
-          </div>
-          <div class="column1">
-            <h2>Classe affaires</h2>  
-          </div>
-          <div class="column1">
-            <h2>Première classe</h2>
-          </div>
-        </div>
+        
         
  
 
@@ -92,7 +81,7 @@
           <div class="column" style="background-color:#aaa;">
             <img src="images/eco.jpg" alt="Snow" style="width:100%">
           </div>
-          <div class="column">
+          <div class="column" style="background-color:#aaa;">
             <img src="images/bus.jpg" alt="Forest" style="width:100%">
           </div>
           <div class="column" style="background-color:#aaa;">
@@ -160,9 +149,9 @@
             <li> <label for="label6">Choisissez une option:</label>
               <select name="label6" id="label6" >
                 <option value="">--Sélectionnez une option--</option>
-                <option value="h">Hyatt</option>
+                <option value="h">turkey airlines</option>
                 <option value="i">qatar airlines</option>
-                <option value="g">emirate airline</option>
+                <option value="g">emirate airlines</option>
               </select></li>
               
             
@@ -330,14 +319,13 @@ function updateOptions(selectedOption) {
     secondSelect.appendChild(option);
   }
 }
-window.onload = function() {document.getElementById('label2').addEventListener('change', function() {
+document.getElementById('label2').addEventListener('change', function() {
     var value = this.value;
-    var labelY = document.getElementById('labelY');
-    if (value === 'd') labelY.innerHTML = '<option value="8940">8940</option>';
-    else if (value === 'e') labelY.innerHTML = '<option value="7900">7900</option>';
-    else if (value === 'f') labelY.innerHTML = '<option value="6999">6999</option>';
+    var labelZ = document.getElementById('labelY');
+    if (value === 'd') labelY.innerHTML = '<option value="7450">7450</option>';
+    else if (value === 'e') labelY.innerHTML = '<option value="8270">8270</option>';
+    else if (value === 'f') labelY.innerHTML = '<option value="9659">9659</option>';
   });
-}
 document.getElementById('label3').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelZ');
