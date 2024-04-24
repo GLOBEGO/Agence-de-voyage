@@ -12,7 +12,6 @@
     <div class="container">
       <form action="#">
           <div class="col-50">
-            <h3>Payment</h3>
             <label for="fname">Carte Acceptés</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
