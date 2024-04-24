@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GLOBEGO</title>
+        <link rel="stylesheet" href="la.css">
+        <link href="https://fonts.googleleapis.com/css?family=Karla" rel="stylesheet">
+        <script src="javaR.js"></script>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    </head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="home.html"> <span>GLOBE</span> GO</a>
+        </div>
+        <ul class="menu">
+            <li><a href="home.html">Acceuil</a></li>
+            <li><a href="#a-propos">à propos</a></li>
+            <li><a href="#popular-destination">destinations</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="C:\wamp64\www\sitephp\login signup\login.php">login</a></li>
+        </ul>
+        <a href="test.html" class="btn-reservation">Réserver Maintenant</a>
+
+        <div class="responsive-menu"></div>
+    </header>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/la1.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/la2.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/la3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <h2>Planifiez votre voyage</br>
+        <h1>Miami</h1>
+        <p>Los Angeles est un endroit où la nature et le glamour hollywoodien se rencontrent. Oui, vous avez les grands studios de cinéma et des lieux emblématiques comme le théâtre chinois TCL et le Walk of Fame<span id="dots">...</span><span id="more">Mais il y a aussi des plages magnifiques, des sentiers de randonnée et des montagnes enneigées à seulement un trajet en voiture. Passez du temps à explorer le Westside où vous pourrez faire du vélo le long de la plage de Santa Monica. Faites du shopping sur Abbot Kinney à Venise, ou prenez la route de la Pacific Coast Highway jusqu’à Malibu et admirez les vues irréelles sur la côte. Ensuite, dirigez-vous vers l’est vers le centre-ville pour découvrir des musées d’art comme le MOCA et le Broad, ainsi que des restaurants branchés. La nourriture mexicaine est grande ici, et certains des meilleurs peuvent être trouvés dans des endroits de trou-dans-le-mur, des camions de taco, ou des centres commerciaux de bande. C’est à vous de décider si vous voulez aller jusqu’au bout ou faire quelque chose de plus discret. Nous avons d’autres idées ci-dessous.
+        </span></p>
+
+        <button onclick="myFunction()" id="myBtn">Read more</button> 
+        <h3>Vol</h3>
+        <div class="row1">
+          <div class="column1" >
+            <h2>Classe economique</h2>
+            
+          </div>
+          <div class="column1">
+            <h2>Classe affaires</h2>  
+          </div>
+          <div class="column1">
+            <h2>Première classe</h2>
+          </div>
+        </div>
+        
+ 
+
+        
+        
+        
+        <div class="row">
+          <div class="column" style="background-color:#aaa;">
+            <img src="images/eco.jpg" alt="Snow" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="images/bus.jpg" alt="Forest" style="width:100%">
+          </div>
+          <div class="column" style="background-color:#aaa;">
+            <img src="images/first.jpg" alt="Mountains" style="width:100%">
+          </div>
+        </div> 
+        
+        
+        <div class="row">
+          <div class="columns4">
+            <ul class="price">
+              <li class="header">Classe economique</li>
+              <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+              <li> <label for="label5">Choisissez une option:</label>
+                <select name="label5" id="label5" >
+                  <option value="">--Sélectionnez une option--</option>
+                  <option value="a">turkish airline</option>
+                  <option value="b">qatar airline</option>
+                  <option value="c">emirate airline</option>
+                </select></li>
+                
+              
+                  
+                <li><label for="labelM">Prix:</label>
+                  <select name="labelM" id="labelM"></li>
+              
+            </ul>
+           
+          <input type="submit" value="Reserver">
+          </div>
+        <div class="columns4">
+          <ul class="price">
+            <li class="header">Classe affaires</li>
+            <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+            <li> <label for="label4">Choisissez une option:</label>
+              <select name="label4" id="label4" >
+                <option value="">--Sélectionnez une option--</option>
+                <option value="d">turkish airline</option>
+                <option value="e">qatar airline</option>
+                <option value="f">emirate airline</option>
+              </select></li>
+              
+            
+                
+              <li><label for="labelP">Prix:</label>
+                <select name="labelP" id="labelP"></li>
+            
+          </ul>
+         
+        <input type="submit" value="Reserver">
+  
+  
+        </div>
+       
+        <div class="columns4">
+          <ul class="price">
+            <li class="header">Première classe</li>
+            <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+            <li> <label for="label6">Choisissez une option:</label>
+              <select name="label6" id="label6" >
+                <option value="">--Sélectionnez une option--</option>
+                <option value="h">Hyatt</option>
+                <option value="i">qatar airlines</option>
+                <option value="g">emirate airline</option>
+              </select></li>
+              
+            
+                
+              <li><label for="labelN">Prix:</label>
+                <select name="labelN" id="labelN"></li>
+            
+          </ul>
+         
+        <input type="submit" value="Reserver">
+  
+  
+        </div>
+      
+        
+        
+        </div>
+        <hr>
+        <h3>Hotel</h3>
+        
+        
+
+        <div class="row">
+          <div class="column" >
+            <img src="images/3s.jpg" alt="Snow" style="width:100%">
+          </div>
+          <div class="column" >
+            <img src="images/4s.jpg" alt="Forest" style="width:100%">
+            
+          </div>
+          <div class="column" >
+            <img src="images/5s.jpg" alt="Mountains" style="width:100%">
+          </div>
+        </div> 
+        <div class="row">
+        <div class="columns4">
+          <ul class="price">
+            <li class="header">3 étoiles</li>
+            <li class="grey">9 jours </li>
+            <li> <label for="firstSelect">Choisissez une option:</label>
+              <select name="firstSelect" id="firstSelect" onchange="updateOptions(this.value)">
+                <option value="">--Sélectionnez une option--</option>
+                <option value="a">Regency Hotel</option>
+                <option value="b">Marriott</option>
+                <option value="c">Mandarin Oriental</option>
+              </select></li>
+              
+            
+                
+              <li><label for="secondSelect">Prix:</label>
+                <select name="secondSelect" id="secondSelect"></li>
+            
+          </ul>
+         
+        <input type="submit" value="Reserver">
+        </div>
+      <div class="columns4">
+        <ul class="price">
+          <li class="header">4 étoiles</li>
+          <li class="grey">9 jours </li>
+          <li> <label for="label2">Choisissez une option:</label>
+            <select name="label2" id="label2" >
+              <option value="">--Sélectionnez une option--</option>
+              <option value="d">Residence Inn by Marriott</option>
+              <option value="e">Belmond</option>
+              <option value="f">Aman Resorts</option>
+            </select></li>
+            
+          
+              
+            <li><label for="labelY">Prix:</label>
+              <select name="labelY" id="labelY"></li>
+          
+        </ul>
+       
+      <input type="submit" value="Reserver">
+
+
+      </div>
+     
+      <div class="columns4">
+        <ul class="price">
+          <li class="header">5 étoiles</li>
+          <li class="grey">9 jours </li>
+          <li> <label for="label3">Choisissez une option:</label>
+            <select name="label3" id="label3" >
+              <option value="">--Sélectionnez une option--</option>
+              <option value="h">Hyatt</option>
+              <option value="i">St Regis Hotels</option>
+              <option value="g">Hotel Bond</option>
+            </select></li>
+            
+          
+              
+            <li><label for="labelZ">Prix:</label>
+              <select name="labelZ" id="labelZ"></li>
+          
+        </ul>
+       
+      <input type="submit" value="Reserver">
+
+
+      </div>
+    
+      
+      
+      </div>
+        
+        
+        
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+} 
+function updateOptions(selectedOption) {
+  var values = {
+    'a': 3750,
+    'b': 3720,
+    'c': 3899
+  };
+  var secondSelect = document.getElementById('secondSelect');
+  secondSelect.innerHTML = ''; // Effacer les options existantes
+  if (values[selectedOption]) {
+    var option = document.createElement('option');
+    option.value = values[selectedOption];
+    option.text = values[selectedOption];
+    secondSelect.appendChild(option);
+  }
+}
+window.onload = function() {document.getElementById('label2').addEventListener('change', function() {
+    var value = this.value;
+    var labelY = document.getElementById('labelY');
+    if (value === 'd') labelY.innerHTML = '<option value="8940">8940</option>';
+    else if (value === 'e') labelY.innerHTML = '<option value="7900">7900</option>';
+    else if (value === 'f') labelY.innerHTML = '<option value="6999">6999</option>';
+  });
+}
+document.getElementById('label3').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelZ');
+    if (value === 'g') labelZ.innerHTML = '<option value="12450">12450</option>';
+    else if (value === 'h') labelZ.innerHTML = '<option value="11270">11270</option>';
+    else if (value === 'i') labelZ.innerHTML = '<option value="13659">13659</option>';
+  });
+  window.onload = function() {document.getElementById('label4').addEventListener('change', function() {
+    var value = this.value;
+    var labelY = document.getElementById('labelP');
+    if (value === 'd') labelP.innerHTML = '<option value="2040">2040</option>';
+    else if (value === 'e') labelP.innerHTML = '<option value="1900">1900</option>';
+    else if (value === 'f') labelP.innerHTML = '<option value="2100">2100</option>';
+  });
+}
+document.getElementById('label5').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelM');
+    if (value === 'a') labelM.innerHTML = '<option value="1250">1250</option>';
+    else if (value === 'b') labelM.innerHTML = '<option value="1170">1170</option>';
+    else if (value === 'c') labelM.innerHTML = '<option value="1359">1359</option>';
+  });
+  document.getElementById('label6').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelN');
+    if (value === 'g') labelN.innerHTML = '<option value="3400">3400</option>';
+    else if (value === 'h') labelN.innerHTML = '<option value="3600">3600</option>';
+    else if (value === 'i') labelN.innerHTML = '<option value="4000">4000</option>';
+  });
+            </script>
+</body>
+</html>
