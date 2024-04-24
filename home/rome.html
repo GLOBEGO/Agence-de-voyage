@@ -69,19 +69,8 @@
 
         <button onclick="myFunction()" id="myBtn">Read more</button> 
         
-        <h3>Vol</h3>
-        <div class="row1">
-          <div class="column1" style="background-color:#aaa;" >
-            <h2>Classe economique</h2>
-            
-          </div>
-          <div class="column1">
-            <h2>Classe affaires</h2>  
-          </div>
-          <div class="column1"style="background-color:#aaa;">
-            <h2>Première classe</h2>
-          </div>
-        </div>
+      
+        
         
  
 
@@ -92,7 +81,7 @@
           <div class="column" style="background-color:#aaa;">
             <img src="images/eco.jpg" alt="Snow" style="width:100%">
           </div>
-          <div class="column">
+          <div class="column" style="background-color:#aaa;">
             <img src="images/bus.jpg" alt="Forest" style="width:100%">
           </div>
           <div class="column" style="background-color:#aaa;">
@@ -101,75 +90,86 @@
         </div> 
         
         
-        <div class="row2">
-          <div class="column2" style="background-color:#aaa;" >
-            <p> Vol agréable et nourriture de qualité à des tarifs raisonnables </p>
-            <br>
-            <h7>Prix=540DT</h7><br>
-            <h8>Choisir date</h8><br>
-            <form action="/submit-form">
-            <label for="Date">Date:</label>
-            <input type="date" id="Date" name="Date"><br>
-            <br>
-            
-              <label for="vol">Choisir votre airline:</label>
-              <select name="airline" id="airline" multiple>
-                <option value="turkish airline">turkish airline</option>
-                <option value="qatar airline">qatar airline</option>
-                <option value="emirate airline">emirate airline</option>
-                <option value="france airline">france airline</option>
+        <div class="row">
+          <div class="columns4">
+            <ul class="price">
+              <li class="header">Classe economique</li>
+              <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+              <li> <label for="label5">Choisissez une option:</label>
+                <select name="label5" id="label5" >
+                  <option value="">--Sélectionnez une option--</option>
+                  <option value="a">turkish airline</option>
+                  <option value="b">qatar airline</option>
+                  <option value="c">emirate airline</option>
+                </select></li>
                 
-              </select><br>
-              <input type="submit" value="Reserver">
-            </form>
-            
-            
-            
-            
+              
+                  
+                <li><label for="labelM">Prix:</label>
+                  <select name="labelM" id="labelM"></li>
+              
+            </ul>
+           
+          <input type="submit" value="Reserver">
           </div>
-          <div class="column2">
-            <p>Une bonne combinaison de valeur et de voyage confortable, ainsi qu’un espace supplémentaire, des lits plats et un service et des repas bien améliorés.</p>
-            <h7>Prix=999DT</h7><br>
-            <h8>Choisir date</h8><br>
-            <form action="/submit-form">
-            <label for="Date">Date:</label>
-            <input type="date" id="Date" name="Date"><br>
-            <br>
+        <div class="columns4">
+          <ul class="price">
+            <li class="header">Classe affaires</li>
+            <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+            <li> <label for="label4">Choisissez une option:</label>
+              <select name="label4" id="label4" >
+                <option value="">--Sélectionnez une option--</option>
+                <option value="d">turkish airline</option>
+                <option value="e">qatar airline</option>
+                <option value="f">emirate airline</option>
+              </select></li>
+              
             
-              <label for="vol">Choisir votre airline:</label>
-              <select name="airline" id="airline" multiple>
-                <option value="turkish airline">turkish airline</option>
-                <option value="qatar airline">qatar airline</option>
-                <option value="emirate airline">emirate airline</option>
-                <option value="france airline">france airline</option>
                 
-              </select><br>
-              <input type="submit" value="Reserver">
-            </form>
+              <li><label for="labelP">Prix:</label>
+                <select name="labelP" id="labelP"></li>
+            
+          </ul>
+         
+        <input type="submit" value="Reserver">
   
-          </div>
-          <div class="column2" style="background-color:#aaa;">
-            <p>Profitez d'un maximum de confort et de luxe, avec une nourriture de la plus haute qualité et de la priorité absolue en embarquement</p>
-            <h7>Prix=1700DT</h7><br>
-            <h8>Choisir date</h8><br>
-            <form action="/submit-form">
-            <label for="Date">Date:</label>
-            <input type="date" id="Date" name="Date"><br>
-            <br>
-            
-              <label for="vol">Choisir votre airline:</label>
-              <select name="airline" id="airline" multiple>
-                <option value="turkish airline">turkish airline</option>
-                
-                <option value="france airline">france airline</option>
-                
-              </select><br>
-              <input type="submit" value="Reserver">
-            </form>
   
-          </div>
         </div>
+       
+        <div class="columns4">
+          <ul class="price">
+            <li class="header">Première classe</li>
+            <li class="grey"><form action="/submit-form">
+              <label for="Date">Date:</label>
+              <input type="date" id="Date" name="Date"><br> </li>
+            <li> <label for="label6">Choisissez une option:</label>
+              <select name="label6" id="label6" >
+                <option value="">--Sélectionnez une option--</option>
+                <option value="h">turkey airlines</option>
+                <option value="i">qatar airlines</option>
+                <option value="g">emirate airlines</option>
+              </select></li>
+              
+            
+                
+              <li><label for="labelN">Prix:</label>
+                <select name="labelN" id="labelN"></li>
+            
+          </ul>
+         
+        <input type="submit" value="Reserver">
+  
+  
+        </div>
+      
         
+        
+        </div>
+        <hr>
         <h3>Hotel</h3>
         
         
@@ -194,16 +194,16 @@
             <li> <label for="firstSelect">Choisissez une option:</label>
               <select name="firstSelect" id="firstSelect" onchange="updateOptions(this.value)">
                 <option value="">--Sélectionnez une option--</option>
-                <option value="a">Sunset Plains Hotel</option>
-                <option value="b">Bourbon Bliss</option>
-                <option value="c">Green Lushy Hotels</option>
+                <option value="a">Hotel Emblem</option>
+                <option value="b">Residence Inn</option>
+                <option value="c">Mandarin Oriental</option>
               </select></li>
               
             
                 
               <li><label for="secondSelect">Prix:</label>
                 <select name="secondSelect" id="secondSelect"></li>
-            <li class="grey"><a href="#" class="button4">Sign Up</a></li>
+            
           </ul>
          
         <input type="submit" value="Reserver">
@@ -212,19 +212,19 @@
         <ul class="price">
           <li class="header">4 étoiles</li>
           <li class="grey">9 jours </li>
-          <li> <label for="firstSelect1">Choisissez une option:</label>
-            <select name="firstSelect1" id="firstSelect1" onchange="updateOptions1(this.value)">
+          <li> <label for="label2">Choisissez une option:</label>
+            <select name="label2" id="label2" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="d">Red Velvet Inn</option>
-              <option value="e">Hotel The Pie</option>
-              <option value="f">Newhouse Hotel</option>
+              <option value="d">Obsidian Sky</option>
+              <option value="e">Quaint Motel</option>
+              <option value="f">The Park Lane</option>
             </select></li>
             
           
               
-            <li><label for="secondSelect1">Prix:</label>
-              <select name="secondSelect1" id="secondSelect1"></li>
-          <li class="grey"><a href="#" class="button4">Sign Up</a></li>
+            <li><label for="labelY">Prix:</label>
+              <select name="labelY" id="labelY"></li>
+          
         </ul>
        
       <input type="submit" value="Reserver">
@@ -236,19 +236,19 @@
         <ul class="price">
           <li class="header">5 étoiles</li>
           <li class="grey">9 jours </li>
-          <li> <label for="firstSelect1">Choisissez une option:</label>
-            <select name="firstSelect1" id="firstSelect1" onchange="updateOptions1(this.value)">
+          <li> <label for="label3">Choisissez une option:</label>
+            <select name="label3" id="label3" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="d">Hotel Kuntz</option>
-              <option value="e">New Hangover Hotel</option>
-              <option value="f">Ah Chew Hotel</option>
+              <option value="h">South Shore Resort</option>
+              <option value="i">Olympus Hotel</option>
+              <option value="g">The Langham</option>
             </select></li>
             
           
               
-            <li><label for="secondSelect1">Prix:</label>
-              <select name="secondSelect1" id="secondSelect1"></li>
-          <li class="grey"><a href="#" class="button4">Sign Up</a></li>
+            <li><label for="labelZ">Prix:</label>
+              <select name="labelZ" id="labelZ"></li>
+          
         </ul>
        
       <input type="submit" value="Reserver">
@@ -259,6 +259,7 @@
       
       
       </div>
+        
         
         
         <script>
@@ -305,9 +306,9 @@
 } 
 function updateOptions(selectedOption) {
   var values = {
-    'a': 750,
-    'b': 720,
-    'c': 799
+    'a': 3750,
+    'b': 3720,
+    'c': 3899
   };
   var secondSelect = document.getElementById('secondSelect');
   secondSelect.innerHTML = ''; // Effacer les options existantes
@@ -318,7 +319,42 @@ function updateOptions(selectedOption) {
     secondSelect.appendChild(option);
   }
 }
-
+document.getElementById('label2').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelY');
+    if (value === 'd') labelY.innerHTML = '<option value="7450">7450</option>';
+    else if (value === 'e') labelY.innerHTML = '<option value="8270">8270</option>';
+    else if (value === 'f') labelY.innerHTML = '<option value="9659">9659</option>';
+  });
+document.getElementById('label3').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelZ');
+    if (value === 'g') labelZ.innerHTML = '<option value="12450">12450</option>';
+    else if (value === 'h') labelZ.innerHTML = '<option value="11270">11270</option>';
+    else if (value === 'i') labelZ.innerHTML = '<option value="13659">13659</option>';
+  });
+  window.onload = function() {document.getElementById('label4').addEventListener('change', function() {
+    var value = this.value;
+    var labelY = document.getElementById('labelP');
+    if (value === 'd') labelP.innerHTML = '<option value="2040">2040</option>';
+    else if (value === 'e') labelP.innerHTML = '<option value="1900">1900</option>';
+    else if (value === 'f') labelP.innerHTML = '<option value="2100">2100</option>';
+  });
+}
+document.getElementById('label5').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelM');
+    if (value === 'a') labelM.innerHTML = '<option value="1250">1250</option>';
+    else if (value === 'b') labelM.innerHTML = '<option value="1170">1170</option>';
+    else if (value === 'c') labelM.innerHTML = '<option value="1359">1359</option>';
+  });
+  document.getElementById('label6').addEventListener('change', function() {
+    var value = this.value;
+    var labelZ = document.getElementById('labelN');
+    if (value === 'g') labelN.innerHTML = '<option value="3400">3400</option>';
+    else if (value === 'h') labelN.innerHTML = '<option value="3600">3600</option>';
+    else if (value === 'i') labelN.innerHTML = '<option value="4000">4000</option>';
+  });
             </script>
 </body>
 </html>
