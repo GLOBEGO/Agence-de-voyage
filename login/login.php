@@ -12,18 +12,18 @@
         $error ="";
         if(!empty($_POST)){
             $user = connectuser($_POST);
-            if(count($user)>0){
-                session_start();
-                $_SESSION['nom'] = $user['nom'];
-                $_SESSION['prenom'] = $user['prenom'];
-                $_SESSION['phone'] = $user['phone'];
-                $_SESSION['email'] = $user['email'];
-                $_SESSION['mp'] = $user['mp'];
-                header('Location: ../home/home.html');
-        }
-        if(!$user){
-           $error = "mot de passe ou email invalide";
-        }
+            if(!$user){
+                 $error = "mot de passe ou email invalide";
+            }
+            else{
+                    session_start();
+                    $_SESSION['nom'] = $user['nom'];
+                    $_SESSION['prenom'] = $user['prenom'];
+                    $_SESSION['phone'] = $user['phone'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['mp'] = $user['mp'];
+                    header('Location: ../home/home.html');
+            }
     }
     ?>
     <div class="login-box">
