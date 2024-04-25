@@ -74,7 +74,7 @@ header  .logo a span {
  
 }
 
-/* Home acceuil CSS */
+
 
 #home {
     background: linear-gradient(rgba(0,0,0,0.1),#333), url("images/img1.jpg");
@@ -153,7 +153,7 @@ header  .logo a span {
     box-shadow: 0 0 10px #29d9d5;
 }
 
-/*A propos CSS*/
+
 #a-propos {
     margin-top: 100px;
     margin-bottom: 50px;
@@ -230,7 +230,7 @@ header  .logo a span {
     font-weight: bold;
 }
 
-/*Destination CSS*/
+
 #popular-destination {
     padding: 0 10% ;
     margin-bottom: 50px;
@@ -288,7 +288,7 @@ header  .logo a span {
     transform: translateX(0);
 }
 
-/* Contact CSS */
+
 #contact {
     padding: 0 10%;
     margin-bottom: 50px;
@@ -366,7 +366,7 @@ footer p span {
 .responsive-menu {
     display: none;
 }
-/*Responsive*/
+
 @media (max-width:750px) {
     header .menu {
         display: none;
@@ -374,7 +374,7 @@ footer p span {
     .btn-reservation {
         display: none;
     }
-    /*Home responsive*/
+    
     #home h2 {
         font-size: 18px;
         -webkit-text-stroke: 0;
@@ -405,7 +405,7 @@ footer p span {
     .home-btn {
         display:block;
     }
-    /*Responsive A propos*/
+   
     .img-desc {
         flex-direction: column;
         width: 100%;
@@ -423,7 +423,7 @@ footer p span {
         margin-bottom: 20px;
     }
 
-    /*Responsive menu*/
+    
     .responsive-menu {
         width: 50px;
         height: 50px;
