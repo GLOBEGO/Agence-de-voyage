@@ -18,6 +18,7 @@
                 $_SESSION['prenom'] = $user['prenom'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['mp'] = $user['mp'];
                 header('Location: ../home/home.html');
         }
         if(!$user){
