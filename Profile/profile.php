@@ -13,13 +13,11 @@ if(!empty($_POST)){
     if($new == $conf && $_SESSION['mp'] == $old){
         $requette = "UPDATE users SET nom = '$nom', prenom = '$prenom', phone = '$phone', mp = '$new' WHERE email = '$email'";
         $res = $conn->query($requette);
-        echo '<div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">Well done!</h4>
-        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-        <hr>
-        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-      </div>';
+        echo '<script language="javascript">';
+        echo 'alert("message successfully sent")';
+        echo '</script>';
     }
+
 }
 ?>
 <!DOCTYPE html>
@@ -36,14 +34,26 @@ if(!empty($_POST)){
 <body>
     <div class="container light-style flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-4">
-            Parametres de Profile
+            Account settings
         </h4>
         <div class="card overflow-hidden">
-            <div class="card-body">
-                <form action="profile.php" method="post">
-                    <div class="form-group">
-                        <label class="form-label">E-mail</label>
-                        <input type="email" class="form-control mb-1"  name="email" value="<?php echo $_SESSION['email']; ?>" readonly>
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                         <input type="email" class="form-control mb-1"  name="email" value="<?php echo $_SESSION['email']; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Nom</label>
@@ -57,30 +67,45 @@ if(!empty($_POST)){
                         <label class="form-label">Phone</label>
                         <input type="text" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>">
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Ancien mot de passe</label>
-                        <input type="password" class="form-control mb-1" name="oldmp" >
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Ancien mot de passe</label>
+                                    <input type="password" class="form-control " name="oldmp" >
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">nouveau mot de passe</label>
+                                    <input type="password" class="form-control " name="nwmp" >
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">confirmer mot de passe</label>
+                                    <input type="password" class="form-control " name="confmp" >
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        
+                            </div>
+                        </div>
+                        <div class="text-right mt-3">
+                            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+                            <button type="button" class="btn btn-default">Cancel</button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">nouveau mot de passe</label>
-                        <input type="password" class="form-control mb-1" name="nwmp" >
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">confirmer mot de passe</label>
-                        <input type="password" class="form-control mb-1" name="confmp" >
-                    </div>
-                    <div class="text-right mt-3">
-                        <button type="submit" class="btn btn-primary">Sauvgarder</button>&nbsp;
-                        <button type="reset" class="btn btn-default">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
         
+    </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
 </body>
 
 </html>
