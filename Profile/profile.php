@@ -1,5 +1,10 @@
+<?php
+session_start();
+$old = $_POST["oldmp"];
+$new = $_POST["nwmp"];
+$conf = $_POST["confmp"];
 
-<!--Website: wwww.codingdung.com-->
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,97 +40,58 @@
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
+                                <form action="profile.php" method="post"></form>
                                 <div class="form-group">
                                     <label class="form-label">Nom</label>
-                                    <input type="text" class="form-control mb-1">
+                                    <input type="text" class="form-control mb-1" value="<?php echo $_SESSION['nom']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Prenom</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" value="<?php echo $_SESSION['prenom']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">E-mail</label>
-                                    <input type="email" class="form-control mb-1" placeholder="foulan.foulani@gmail.com">
+                                    <input type="email" class="form-control mb-1"value="<?php echo $_SESSION['email']; ?>">
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Ancien mot de passe</label>
-                                    <input type="password" class="form-control mb-1">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">nouveau mot de passe</label>
-                                    <input type="password" class="form-control mb-1">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">confirmer mot de passe</label>
-                                    <input type="password" class="form-control mb-1">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="account-info">
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Contacts</h6>
                                 <div class="form-group">
                                     <label class="form-label">Phone</label>
                                     <input type="text" class="form-control" value="+0 (123) 456 7891">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Website</label>
-                                    <input type="text" class="form-control" value>
+                                    <label class="form-label">Ancien mot de passe</label>
+                                    <input type="password" class="form-control mb-1" name="oldmp">
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-label">nouveau mot de passe</label>
+                                    <input type="password" class="form-control mb-1" name="nwmp">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">confirmer mot de passe</label>
+                                    <input type="password" class="form-control mb-1" name="confmp">
+                                </div>
+                            </div>
+                        </div>
+                                
                             </div>
                         </div>
                         <div class="tab-pane fade" id="account-social-links">
                             <div class="card-body pb-2">
-                                <div class="form-group">
-                                    <label class="form-label">Twitter</label>
-                                    <input type="text" class="form-control" value="https://twitter.com/user">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Facebook</label>
-                                    <input type="text" class="form-control" value="https://www.facebook.com/user">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Google+</label>
-                                    <input type="text" class="form-control" value>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">LinkedIn</label>
-                                    <input type="text" class="form-control" value>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Instagram</label>
-                                    <input type="text" class="form-control" value="https://www.instagram.com/user">
-                                </div>
+                                
+                                
+                               
+                               
                             </div>
                         </div>
                         <div class="tab-pane fade" id="account-connections">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-twitter">Connect to
-                                    <strong>Twitter</strong></button>
-                            </div>
+                            
                             <hr class="border-light m-0">
                             <div class="card-body">
-                                <h5 class="mb-2">
-                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i
-                                            class="ion ion-md-close"></i> Remove</a>
-                                    <i class="ion ion-logo-google text-google"></i>
-                                    You are connected to Google:
-                                </h5>
-                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                    data-cfemail="f9979498818e9c9595b994989095d79a9694">[email&#160;protected]</a>
-                            </div>
+                                
+                                
                             <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-facebook">Connect to
-                                    <strong>Facebook</strong></button>
-                            </div>
+                            <
                             <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-instagram">Connect to
-                                    <strong>Instagram</strong></button>
-                            </div>
+                            
                         </div>
                         <div class="tab-pane fade" id="account-notifications">
                             <div class="card-body pb-2">
@@ -202,7 +168,7 @@
             </div>
         </div>
         <div class="text-right mt-3">
-            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-primary">Sauvgarder</button>&nbsp;
             <button type="button" class="btn btn-default">Cancel</button>
         </div>
     </div>

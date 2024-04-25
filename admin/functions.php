@@ -145,6 +145,6 @@ $nbclient= $resultat ->fetch_all();
         $requette = "SELECT * FROM users WHERE email='$email' AND mp='$password'";
 
         $resultat = $conn->query($requette);
-        $user =  $resultat->fetch_all();
+        $user =  $resultat->fetch_array();
         return $user;
       }

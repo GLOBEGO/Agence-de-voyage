@@ -13,6 +13,11 @@
         if(!empty($_POST)){
             $user = connectuser($_POST);
             if(count($user)>0){
+                session_start();
+                $_SESSION['nom'] = $user['nom'];
+                $_SESSION['prenom'] = $user['prenom'];
+                $_SESSION['phone'] = $user['phone'];
+                $_SESSION['email'] = $user['email'];
                 header('Location: ../home/home.html');
         }
         if(!$user){
