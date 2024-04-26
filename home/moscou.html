@@ -108,12 +108,26 @@
                 
               
                   
-                <li><label for="labelM">Prix:</label>
-                  <select name="labelM" id="labelM"></li>
+                <li><label for="labelM">Prix vol:</label>
+                  <select name="labelM" id="labelM"></select></li>
+                    <li><label for="multiplier2">Nombre de passager: </label>
+                      <select id="multiplier2" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                      </select><button onclick="multiply2()">Confirmer</button></li>
+                    
+                      <li><label for="pls2">Prix final</label>
+                        <input type="text" id="pls2" name="pls2"> <button type="button">Reserver</button> </li>  
               
             </ul>
            
-          <input type="submit" value="Reserver">
+          
           </div>
         <div class="columns4">
           <ul class="price">
@@ -131,12 +145,28 @@
               
             
                 
-              <li><label for="labelP">Prix:</label>
-                <select name="labelP" id="labelP"></li>
+              <li><label for="labelP">Prix vol:</label>
+                <select name="labelP" id="labelP"></select></li>
+                  
+                  <li><label for="multiplier">Nombre de passager: </label>
+                    <select id="multiplier" >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select><button onclick="multiply()">Confirmer</button></li>
+                  
+                    <li><label for="pls">Prix final</label>
+                      <input type="text" id="pls" name="pls"> <button type="button">Reserver</button> </li>    
             
+                
           </ul>
          
-        <input type="submit" value="Reserver">
+        
   
   
         </div>
@@ -157,12 +187,26 @@
               
             
                 
-              <li><label for="labelN">Prix:</label>
-                <select name="labelN" id="labelN"></li>
+              <li><label for="labelN">Prix vol:</label>
+                <select name="labelN" id="labelN"></select></li>
+                  <li><label for="multiplier1">Nombre de passager: </label>
+                    <select id="multiplier1" >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select><button onclick="multiply1()">Confirmer</button></li>
+                  
+                    <li><label for="pls1">Prix final</label>
+                      <input type="text" id="pls1" name="pls1"> <button type="button">Reserver</button> </li>  
             
           </ul>
          
-        <input type="submit" value="Reserver">
+        
   
   
         </div>
@@ -191,8 +235,8 @@
         <div class="columns4">
           <ul class="price">
             <li class="header">3 étoiles</li>
-            <li class="grey">9 jours </li>
-            <li> <label for="firstSelect">Choisissez une option:</label>
+            
+            <li class="grey"> <label for="firstSelect">Choisissez une option:</label>
               <select name="firstSelect" id="firstSelect" onchange="updateOptions(this.value)">
                 <option value="">--Sélectionnez une option--</option>
                 <option value="a"> Cronus Luxury Plaza</option>
@@ -202,18 +246,59 @@
               
             
                 
-              <li><label for="secondSelect">Prix:</label>
-                <select name="secondSelect" id="secondSelect"></li>
-            
+              <li><label for="secondSelect">Prix (par jour):</label>
+                <select name="secondSelect" id="secondSelect"></select></li>
+                  <li><label for="multiplier4">Nombre de personnes: </label>
+                    <select id="multiplier4" >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select><button onclick="multiply4()">Confirmer</button></li>
+                  
+                    <li><label for="pls8">Prix</label>
+                      <input type="text" id="pls8" name="pls8">  </li> 
+                      <li><label for="dtt">Durée: </label>
+                        <select id="dtt" >
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          
+                        </select><button onclick="multiply7()">Confirmer</button></li>
+                        <li><label for="dtt2">Prix final</label>
+                          <input type="text" id="dtt2" name="dtt2">
+                          <button type="button">Reserver</button>
           </ul>
          
-        <input type="submit" value="Reserver">
+       
         </div>
       <div class="columns4">
         <ul class="price">
           <li class="header">4 étoiles</li>
-          <li class="grey">9 jours </li>
-          <li> <label for="label2">Choisissez une option:</label>
+          
+          <li class="grey"> <label for="label2">Choisissez une option:</label>
             <select name="label2" id="label2" >
               <option value="">--Sélectionnez une option--</option>
               <option value="d">Residence Rose</option>
@@ -223,21 +308,63 @@
             
           
               
-            <li><label for="labelY">Prix:</label>
-              <select name="labelY" id="labelY"></li>
+            <li><label for="labelY">Prix (par jour):</label>
+              <select name="labelY" id="labelY"></select></li>
+                <li><label for="multiplier5">Nombre de personnes: </label>
+                  <select id="multiplier5" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select><button onclick="multiply5()">Confirmer</button></li>
+                
+                  <li><label for="pls5">Prix </label>
+                    <input type="text" id="pls5" name="pls5">  </li>  
+                    
+                      <li><label for="dtt3">Durée: </label>
+                        <select id="dtt3" >
+                          <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                          
+                        </select><button onclick="multiply8()">Confirmer</button></li>
+                        <li><label for="dtt4">Prix final</label>
+                          <input type="text" id="dtt4" name="dtt4">
+                          <button type="button">Reserver</button>
           
         </ul>
        
-      <input type="submit" value="Reserver">
-
+      
 
       </div>
      
       <div class="columns4">
         <ul class="price">
           <li class="header">5 étoiles</li>
-          <li class="grey">9 jours </li>
-          <li> <label for="label3">Choisissez une option:</label>
+          
+          <li class="grey"> <label for="label3">Choisissez une option:</label>
             <select name="label3" id="label3" >
               <option value="">--Sélectionnez une option--</option>
               <option value="h">Borvo Grand Suites</option>
@@ -247,13 +374,53 @@
             
           
               
-            <li><label for="labelZ">Prix:</label>
-              <select name="labelZ" id="labelZ"></li>
-          
+            <li><label for="labelZ">Prix (par jour):</label>
+              <select name="labelZ" id="labelZ"></select></li>
+                <li><label for="multiplier6">Nombre de personnes: </label>
+                  <select id="multiplier6" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select><button onclick="multiply6()">Confirmer</button></li>
+                
+                  <li><label for="pls6">Prix </label>
+                    <input type="text" id="pls6" name="pls6">  </li>  
+                    <li><label for="dtt5">Durée: </label>
+                      <select id="dtt5" >
+                        <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                        
+                      </select><button onclick="multiply9()">Confirmer</button></li>
+                      <li><label for="dtt5">Prix final</label>
+                        <input type="text" id="dtt6" name="dtt6">
+                        <button type="button">Reserver</button>
         </ul>
        
-      <input type="submit" value="Reserver">
-
+      
 
       </div>
     
@@ -307,9 +474,9 @@
 } 
 function updateOptions(selectedOption) {
   var values = {
-    'a': 3750,
-    'b': 3720,
-    'c': 3899
+    'a': 120,
+    'b': 210,
+    'c': 199
   };
   var secondSelect = document.getElementById('secondSelect');
   secondSelect.innerHTML = ''; // Effacer les options existantes
@@ -323,16 +490,16 @@ function updateOptions(selectedOption) {
 document.getElementById('label2').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelY');
-    if (value === 'd') labelY.innerHTML = '<option value="7450">7450</option>';
-    else if (value === 'e') labelY.innerHTML = '<option value="8270">8270</option>';
-    else if (value === 'f') labelY.innerHTML = '<option value="9659">9659</option>';
+    if (value === 'd') labelY.innerHTML = '<option value="200">200</option>';
+    else if (value === 'e') labelY.innerHTML = '<option value="220">220</option>';
+    else if (value === 'f') labelY.innerHTML = '<option value="199">199</option>';
   });
 document.getElementById('label3').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelZ');
-    if (value === 'g') labelZ.innerHTML = '<option value="12450">12450</option>';
-    else if (value === 'h') labelZ.innerHTML = '<option value="11270">11270</option>';
-    else if (value === 'i') labelZ.innerHTML = '<option value="13659">13659</option>';
+    if (value === 'g') labelZ.innerHTML = '<option value="800">800</option>';
+    else if (value === 'h') labelZ.innerHTML = '<option value="870">870</option>';
+    else if (value === 'i') labelZ.innerHTML = '<option value="900">900</option>';
   });
   window.onload = function() {document.getElementById('label4').addEventListener('change', function() {
     var value = this.value;
@@ -356,6 +523,60 @@ document.getElementById('label5').addEventListener('change', function() {
     else if (value === 'h') labelN.innerHTML = '<option value="3600">3600</option>';
     else if (value === 'i') labelN.innerHTML = '<option value="4000">4000</option>';
   });
+  function multiply() {
+    var number = document.getElementById("labelP").value;
+  var multiplier = document.getElementById("multiplier").value;
+  var result = number * multiplier;
+  document.getElementById("pls").value = result;
+}
+function multiply1() {
+    var number = document.getElementById("labelN").value;
+  var multiplier = document.getElementById("multiplier1").value;
+  var result = number * multiplier;
+  document.getElementById("pls1").value = result;
+}
+function multiply2() {
+    var number = document.getElementById("labelM").value;
+  var multiplier = document.getElementById("multiplier2").value;
+  var result = number * multiplier;
+  document.getElementById("pls2").value = result;
+}
+function multiply4() {
+    var number = document.getElementById("secondSelect").value;
+  var multiplier = document.getElementById("multiplier4").value;
+  var result = number * multiplier;
+  document.getElementById("pls8").value = result;
+}
+function multiply5() {
+    var number = document.getElementById("labelY").value;
+  var multiplier = document.getElementById("multiplier5").value;
+  var result = number * multiplier;
+  document.getElementById("pls5").value = result;
+}
+function multiply6() {
+    var number = document.getElementById("labelZ").value;
+  var multiplier = document.getElementById("multiplier6").value;
+  var result = number * multiplier;
+  document.getElementById("pls6").value = result;
+}
+function multiply7() {
+    var number = document.getElementById("pls8").value;
+  var multiplier = document.getElementById("dtt").value;
+  var result = number * multiplier;
+  document.getElementById("dtt2").value = result;
+}
+function multiply8() {
+    var number = document.getElementById("pls5").value;
+  var multiplier = document.getElementById("dtt3").value;
+  var result = number * multiplier;
+  document.getElementById("dtt4").value = result;
+}
+function multiply9() {
+    var number = document.getElementById("pls6").value;
+  var multiplier = document.getElementById("dtt5").value;
+  var result = number * multiplier;
+  document.getElementById("dtt6").value = result;
+}
             </script>
 </body>
 </html>
