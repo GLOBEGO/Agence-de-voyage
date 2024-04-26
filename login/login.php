@@ -35,7 +35,6 @@
             <input type="password" id="password" name="password" required ><br>
             <span style="color:crimson;" ><?php echo $error ?></span><br>
             <input type="submit" value="Login"><br>
-            <a href="../motpasse oublie/oublie.php">Oublie Mot de Passe?</a><br>
             <p>Don't have an account? <a href="../sign/signup.php">Sign up</a></p>
         </form>
     </div>
