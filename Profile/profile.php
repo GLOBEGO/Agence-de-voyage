@@ -10,16 +10,29 @@ if(!empty($_POST)){
     $old = $_POST['oldmp'];
     $new = $_POST['nwmp'];
     $conf = $_POST['confmp'];
-    if($new == $conf && $_SESSION['mp'] == $old){
-        $requette = "UPDATE users SET nom = '$nom', prenom = '$prenom', phone = '$phone', mp = '$new' WHERE email = '$email'";
-        $res = $conn->query($requette);
-        echo '<script language="javascript">';
-        echo 'alert("message successfully sent")';
-        echo '</script>';
+    if(!empty($old) && !empty($new)&& !empty($conf)){
+        if($new == $conf && $_SESSION['mp'] == $old){
+            $requette = "UPDATE users SET mp = '$new' WHERE email = '$email'";
+            $res = $conn->query($requette);
+            echo '<div class="alert alert-success" role="alert">Profile updated successfully.</div>';
+        }
+        else{
+            echo '<div class="alert alert-danger" role="alert">Invalid password.</div>';
+        }
     }
+    if(isset($nom) && isset($prenom)&& isset($phone)){
+        $requette = "UPDATE users SET nom = '$nom', prenom='$prenom', phone='$phone' WHERE email = '$email'";
+        $res = $conn->query($requette);
+        echo '<div class="alert alert-success" role="alert">Profile updated successfully.</div>';
+    }
+    else{
+        echo '<div class="alert alert-warning" role="alert">Please fill all password fields.</div>';
+    }
+
 
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,8 +65,9 @@ if(!empty($_POST)){
                             <hr class="border-light m-0">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="form-label">E-mail</label>
-                                         <input type="email" class="form-control mb-1"  name="email" value="<?php echo $_SESSION['email']; ?>" readonly>
+                    <form action="profile.php" method="post">
+                        <label class="form-label">E-mail</label>
+                         <input type="email" class="form-control mb-1"  name="email" value="<?php echo $_SESSION['email']; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Nom</label>
@@ -72,6 +86,7 @@ if(!empty($_POST)){
                         <div class="tab-pane fade" id="account-change-password">
                             <div class="card-body pb-2">
                                 <div class="form-group">
+                                    
                                     <label class="form-label">Ancien mot de passe</label>
                                     <input type="password" class="form-control " name="oldmp" >
                                 </div>
@@ -94,9 +109,10 @@ if(!empty($_POST)){
                             </div>
                         </div>
                         <div class="text-right mt-3">
-                            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+                            <button type="submiu" class="btn btn-primary">Save changes</button>&nbsp;
                             <button type="button" class="btn btn-default">Cancel</button>
                         </div>
+                        </form>
                     </div>
         
     </div>
