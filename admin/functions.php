@@ -129,13 +129,21 @@ $nbclient= $resultat ->fetch_all();
       
       function ajoutClient($data){
         $conn = connect();
-        $req = "INSERT INTO users(nom,prenom,sexe,email,phone,mp) VALUES('".$data['nom']."','".$data['prenom']."','".$data['sexe']."','".$data['email']."','".$data['tel']."','".$data['conf']."')";
+        $email = $data['email'];
+        $reqette = "SELECT * FROM users WHERE email='$email'";
+        $result = $conn->query($reqette);
+        $user = $result->fetch_all();
+        if(count($user) == 0){
+        $req = "INSERT INTO users(nom,prenom,email,phone,mp) VALUES('".$data['nom']."','".$data['prenom']."','".$data['email']."','".$data['tel']."','".$data['conf']."')";
         $res = $conn->query($req);
-        if ($res){
-          return true;
-        }
+      }
+
         else{
-          return false;}
+          echo"<script>";
+          echo"alert('user existe deja')";
+          echo"</script>";
+        }
+        
         }
       function connectuser($data){
         $conn=connect();
