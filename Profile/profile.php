@@ -15,15 +15,24 @@ if(!empty($_POST)){
             $requette = "UPDATE users SET mp = '$new' WHERE email = '$email'";
             $res = $conn->query($requette);
             echo '<div class="alert alert-success" role="alert">Profile updated successfully.</div>';
+                    $_SESSION['nom'] = $nom;
+                    $_SESSION['prenom'] = $prenom;
+                    $_SESSION['phone'] = $phone;
+                    $_SESSION['email'] = $email;
         }
         else{
             echo '<div class="alert alert-danger" role="alert">Invalid password.</div>';
         }
     }
-    if(isset($nom) && isset($prenom)&& isset($phone)){
+    if(isset($nom,$prenom,$phone) && empty($old) && empty($new)&& empty($conf)){
         $requette = "UPDATE users SET nom = '$nom', prenom='$prenom', phone='$phone' WHERE email = '$email'";
         $res = $conn->query($requette);
         echo '<div class="alert alert-success" role="alert">Profile updated successfully.</div>';
+        $_SESSION['nom'] = $nom;
+        $_SESSION['prenom'] = $prenom;
+        $_SESSION['phone'] = $phone;
+        $_SESSION['email'] = $email;
+        $_SESSION['mp'] = $conf;
     }
     else{
         echo '<div class="alert alert-warning" role="alert">Please fill all password fields.</div>';

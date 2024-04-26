@@ -11,6 +11,7 @@
     include "../admin/functions.php";
     if (!empty($_POST)){
         ajoutClient($_POST);
+        
     }
 
     ?>
@@ -26,9 +27,9 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="foulan.foulani@gmail.com" required ><br>
             <label for="password">Mot de passe</label><br>
-            <input type="password" id="password" name="password" required ><br>
+            <input type="password" id="password" name="password" required minlength="6" ><br>
             <label for="conf">Confirmer Mot de Passe</label>
-            <input type="password" id="conf" name="conf" required oninput="return check()" >
+            <input type="password" id="conf" name="conf" required oninput="return check()" minlength="6">
             <p id="msg"></p><br>
             <input type="submit" value="Sign Up" id="sub"><br>
             <a href="../login/login.php">already have an account ?</a><br>

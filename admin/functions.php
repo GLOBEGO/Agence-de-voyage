@@ -136,6 +136,7 @@ $nbclient= $resultat ->fetch_all();
         if(count($user) == 0){
         $req = "INSERT INTO users(nom,prenom,email,phone,mp) VALUES('".$data['nom']."','".$data['prenom']."','".$data['email']."','".$data['tel']."','".$data['conf']."')";
         $res = $conn->query($req);
+        header("location: ../login/login.php");
       }
 
         else{

@@ -1,5 +1,5 @@
 header {
-    background-color: #222;
+    background-color: #5C1A1B;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,14 +14,14 @@ header {
 }
 header  .logo a {
     font-size: 25px;
-    color: #29d9d5;
+    color: #D2B48C;
  
 }
 header  .logo a span {
     color: #fff;
 }
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {font-family: Verdana, sans-serif; margin:0;background-color: #5C1A1B; color: white;}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -107,7 +107,7 @@ img {vertical-align: middle;}
 }
 header  .logo a {
     font-size: 25px;
-    color: #29d9d5;
+    color: #D2B48C;
  
 }
 header  .logo a span {
@@ -126,15 +126,15 @@ header  .logo a span {
     font-size: 14px;
 }
 .btn-reservation {
-    color: #29d9d5;
+    color: #D2B48C;
     font-size: 14px;
-    border: 2px solid #29d9d5;
+    border: 2px solid #D2B48C;
     padding: 5px 20px;
     transition: 0.5s;
     font-weight: bolder;
 }
 .btn-reservation:hover {
-    background-color: #29d9d5;
+    background-color: #D2B48C;
     color: #fff;
  
 }
@@ -281,4 +281,8 @@ span2{
   .columns {
     width: 100%;
   }
+}
+
+.grey{
+  color: #111;
 }
