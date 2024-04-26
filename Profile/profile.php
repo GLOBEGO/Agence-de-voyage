@@ -98,6 +98,7 @@ if(!empty($_POST)){
                                     <label class="form-label">confirmer mot de passe</label>
                                     <input type="password" class="form-control " name="confmp" >
                                 </div>
+                                
                             </div>
                         </div>
                         
@@ -108,11 +109,16 @@ if(!empty($_POST)){
                         
                             </div>
                         </div>
+                        
                         <div class="text-right mt-3">
                             <button type="submiu" class="btn btn-primary">Save changes</button>&nbsp;
                             <button type="button" class="btn btn-default">Cancel</button>
                         </div>
+                        <div>
+                                <a href="../login/signout.php" style="color: red;">se deconnecter</a>
+                                </div>
                         </form>
+                        
                     </div>
         
     </div>
