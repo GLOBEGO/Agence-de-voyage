@@ -17,10 +17,6 @@
     <div class="sign-box">
         <h1>Sign Up</h1>
         <form action="signup.php" method="post" onsubmit="return checksubmit()">
-            <div class="sexe"><label for="M">MR</label>
-            <input type="radio" id="M" name="sexe" value="M">
-            <label for="F">MRS</label>
-            <input type="radio" id="F" name="sexe" value="F"><br></div>
             <label for="nom">Nom</label><br>
             <input type="text" name="nom" id="nom" required >
             <label for="prenom">Prenom</label>
