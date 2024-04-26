@@ -20,7 +20,7 @@
             <label for="nom_sur_carte">Nom sur Carte</label>
             <input type="text" id="nom_sur_carte" name="nom_sur_carte" placeholder="John More Doe">
             <label for="numero_carte">Numero de Carte</label>
-            <input type="text" id="numero_carte" name="numero_carte" placeholder="1111-2222-3333-4444">
+            <input type="text" id="numero_carte" name="numero_carte" placeholder="xxxx-xxxx-xxxx-xxxx">
             <label for="exp_mois">Exp mois</label>
             <input type="text" id="exp_mois" name="exp_mois" placeholder="September">
             <div class="row">
@@ -74,6 +74,64 @@ if (!empty($_POST['nom_sur_carte']) && !empty($_POST['numero_carte']) && !empty(
 
 $mysqli->close();
 ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form');
+  const nomCarte = document.getElementById('nom_sur_carte');
+  const numeroCarte = document.getElementById('numero_carte');
+  const expMois = document.getElementById('exp_mois');
+  const expAnnee = document.getElementById('exp_annee');
+  const cvv = document.getElementById('cvv');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+    // Vérification du nom sur la carte
+    if (nomCarte.value.trim() === '') {
+      alert('Veuillez entrer le nom sur la carte');
+      nomCarte.focus();
+      return false;
+    }
+
+    // Vérification du numéro de carte
+    const cardRegex = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+    if (!cardRegex.test(numeroCarte.value.trim())) {
+      alert('Veuillez entrer un numéro de carte valide');
+      numeroCarte.focus();
+      return false;
+    }
+
+    // Vérification de la date d'expiration
+    const expMoisValue = expMois.value.trim();
+    const expAnneeValue = expAnnee.value.trim();
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1; // Les mois sont indexés à partir de zéro
+    if (parseInt(expAnneeValue) < currentYear || (parseInt(expAnneeValue) === currentYear && getMonthIndex(expMoisValue) < currentMonth)) {
+      alert('La carte est expirée');
+      expMois.focus();
+      return false;
+    }
+
+    // Vérification du CVV
+    if (cvv.value.trim().length !== 3) {
+      alert('Veuillez entrer un code CVV valide');
+      cvv.focus();
+      return false;
+    }
+
+    // Si toutes les vérifications passent, le formulaire est soumis
+    alert('Paiement réussi !');
+    form.submit();
+  });
+
+  // Fonction pour obtenir l'index du mois
+  function getMonthIndex(monthName) {
+    const months = ['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'];
+    return months.indexOf(monthName.toLowerCase()) + 1;
+  }
+});
+</script>
 </body>
 </html>
 
