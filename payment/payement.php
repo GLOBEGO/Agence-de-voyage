@@ -20,7 +20,7 @@
             <label for="nom_sur_carte">Nom sur Carte</label>
             <input type="text" id="nom_sur_carte" name="nom_sur_carte" placeholder="John More Doe">
             <label for="numero_carte">Numero de Carte</label>
-            <input type="text" id="numero_carte" name="numero_carte" placeholder="1111-2222-3333-4444">
+            <input type="text" id="numero_carte" name="numero_carte" placeholder="xxxx-xxxx-xxxx-xxxx">
             <label for="exp_mois">Exp mois</label>
             <input type="text" id="exp_mois" name="exp_mois" placeholder="September">
             <div class="row">
