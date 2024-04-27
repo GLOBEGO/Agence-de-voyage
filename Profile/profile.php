@@ -56,16 +56,16 @@ if(!empty($_POST)){
 <body>
     <div class="container light-style flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-4">
-            Account settings
+            Parametres de compte
         </h4>
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
-                            href="#account-general">General</a>
+                            href="#account-general">Generale</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-change-password">Change password</a>
+                            href="#account-change-password">Changer mot de passe</a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -87,7 +87,7 @@ if(!empty($_POST)){
                         <input type="text" class="form-control" name="prenom" value="<?php echo $_SESSION['prenom']; ?>">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Phone</label>
+                        <label class="form-label">telephone</label>
                         <input type="text" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>">
                     </div>
                             </div>
@@ -120,8 +120,8 @@ if(!empty($_POST)){
                         </div>
                         
                         <div class="text-right mt-3">
-                            <button type="submiu" class="btn btn-primary">Save changes</button>&nbsp;
-                            <button type="button" class="btn btn-default">Cancel</button>
+                            <button type="submiu" class="btn btn-primary">sauvgarder</button>&nbsp;
+                            <button type="button" class="btn btn-default">Annuler</button>
                         </div>
                         <div>
                                 <a href="../login/signout.php" style="color: red;">se deconnecter</a>

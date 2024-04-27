@@ -1,3 +1,18 @@
+<?php
+include "../reserve/reservation_vol.php";
+if(isset($_POST['eco'])){
+  $dest = 'miami';
+  economique("$dest");
+}
+if(isset($_POST['aff'])){
+  $dest = 'miami';
+  affaires("$dest");
+}
+if(isset($_POST['pre'])){
+  $dest = 'miami';
+  premiere("$dest");
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,10 +40,9 @@
             <li><a href="home.html">Acceuil</a></li>
             <li><a href="#a-propos">à propos</a></li>
             <li><a href="#popular-destination">destinations</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="C:\wamp64\www\sitephp\login signup\login.php">login</a></li>
+          
         </ul>
-        <a href="paris.html" class="btn-reservation">Réserver Maintenant</a>
+
 
         <div class="responsive-menu"></div>
     </header>
@@ -36,19 +50,19 @@
 
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="images/rome3.jpg" style="width:100%">
+          <img src="images/miami1.jpg" style="width:100%">
           
         </div>
         
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
-          <img src="images/rome1.jpg" style="width:100%">
+          <img src="images/miami2.jpg" style="width:100%">
           
         </div>
         
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="images/rome2.jpg" style="width:100%">
+          <img src="images/miami3.jpg" style="width:100%">
           
         </div>
         
@@ -64,12 +78,13 @@
           <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
         <h2>Planifiez votre voyage</br>
-        <h1>Rome</h1>
-        <p>Il est facile de comprendre pourquoi Rome est l’un des endroits les plus visités de la planète : il y a de l’histoire partout (le Panthéon, le Colisée, etc.), des chefs-d’œuvre sculpturaux sur presque toutes les places et, bien sûr, une nourriture ridiculement bonne. <span id="dots">...</span><span id="more">Chaque voyage pourrait ressembler à un tourbillon, mais ralentissez et vous découvrirez de nombreuses surprises. Passez un dimanche matin à Trastevere et chassez les trouvailles vintage au marché aux puces de Porta Portese. Ou rendez-vous à San Lorenzo, un quartier étudiant à l’ambiance branchée mais charmante, pour découvrir des boutiques, des galeries et des œuvres d’art de rue à la mode. Le dîner n’a pas lieu avant la fin, alors prenez un apéritif à Prati, qui est accessible à pied depuis le Vatican et regorgeant de bars excentriques. Oui, l’énergie est au prochain niveau, alors si vous avez besoin d’une pause, dirigez-vous vers les collines (littéralement) et visitez la colline de l’Aventin. une banlieue verdoyante avec des jardins paisibles et certaines des meilleures vues de la ville. Il y a toujours quelque chose à faire et nous avons plus de recos, ci-dessous.</span></p>
+        <h1>Miami</h1>
+        <p>La nuit, Miami est légendaire : tout est néon art déco, la musiquese répand dans les rues et les cocktails sur le toit<span id="dots">...</span><span id="more">Mais de jour, il y a autant à explorer. Les amateurs d’architecture peuvent visiter l’ancien monastère espagnol du XIIe siècle reconstruit et le musée et jardins de Vizcaya inspirés de la Renaissance, ou faire une croisière sur Ocean Drive, une promenade art déco. Pour les amoureux de la plage, il y a beaucoup au-delà de South Beach : nager avec les tortues de mer à Boynton Beach, faire de la planche à voile à Hobie Beach, ou sauter le sable et faire un plongeon à la piscine vénitienne (un autre joyau architectural). Et grâce aux fortes communautés cubaines et juives, vous pouvez grignoter des pastelitos à Little Havana ou prendre un pain de seigle casher à Wynwood — le même jour, si vous êtes d’accord.
+        </span></p>
 
         <button onclick="myFunction()" id="myBtn">Read more</button> 
         
-      
+        <h3>Vol</h3>
         
         
  
@@ -78,40 +93,26 @@
         
         
         <div class="row">
-          <div class="column" style="background-color:#aaa;">
-            <img src="images/eco.jpg" alt="Snow" style="width:100%">
-          </div>
-          <div class="column" style="background-color:#aaa;">
-            <img src="images/bus.jpg" alt="Forest" style="width:100%">
-          </div>
-          <div class="column" style="background-color:#aaa;">
-            <img src="images/first.jpg" alt="Mountains" style="width:100%">
-          </div>
-        </div> 
-        
-        
-        <div class="row">
           <div class="columns4">
             <ul class="price">
+              <form action="#" method="post">
               <li class="header">Classe economique</li>
-              <li class="grey"><form action="../payment/payement.php">
-              <label for="Date">Date:</label>
-              <input type="date" id="Date" name="Date"><br> </li>
+              <li class="grey">
+              <label for="date">Please enter a date:</label><br>
+              <input type="date" id="date" name="date" min="2024-04-27"><br> 
+            </li>
+            <label name="dest" value="moscow"></label>
               <li> <label for="label5">Choisissez une option:</label>
                 <select name="label5" id="label5" >
                   <option value="">--Sélectionnez une option--</option>
-                  <option value="a">turkish airline</option>
-                  <option value="b">qatar airline</option>
-                  <option value="c">emirate airline</option>
+                  <option value="turkish airline">turkish airline</option>
+                  <option value="qatar airline">qatar airline</option>
+                  <option value="emirate airline">emirate airline</option>
                 </select></li>
-                
-              
-                  
-                  
                 <li><label for="labelM">Prix vol:</label>
                   <select name="labelM" id="labelM"></select></li>
                     <li><label for="multiplier2">Nombre de passager: </label>
-                      <select id="multiplier2" >
+                      <select id="multiplier2" name="multiplier2">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -120,27 +121,29 @@
                         <option value="6">6</option>
                         <option value="7">7</option>
                         <option value="8">8</option>
-                      </select><button onclick="multiply2()">Confirmer</button></li>
+                      </select>
+                      <button onclick="multiply2()" type="button">Confirmer</button></li>
                     
                       <li><label for="pls2">Prix final</label>
-                        <input type="text" id="pls2" name="pls2"> <input type="submit" value="Reserver"> </li>  
-              
+                        <input type="text" id="pls2" name="pls2"> <input type="submit" name="eco" value="Reserver"> </li>  
+                      </form>
             </ul>
            
           
           </div>
         <div class="columns4">
           <ul class="price">
+          <form action="#" method="post">
             <li class="header">Classe affaires</li>
-            <li class="grey"><form action="../payment/payement.php">
-              <label for="Date">Date:</label>
-              <input type="date" id="Date" name="Date"><br> </li>
+            <li class="grey">
+              <label for="date">Please enter a date:</label><br> 
+              <input type="date" id="date" name="date" min="2024-04-27"><br> </li>
             <li> <label for="label4">Choisissez une option:</label>
               <select name="label4" id="label4" >
                 <option value="">--Sélectionnez une option--</option>
-                <option value="d">turkish airline</option>
-                <option value="e">qatar airline</option>
-                <option value="f">emirate airline</option>
+                <option value="turkish airline">turkish airline</option>
+                <option value="qatar airline">qatar airline</option>
+                <option value="emirate airline">emirate airline</option>
               </select></li>
               
             
@@ -149,7 +152,7 @@
                 <select name="labelP" id="labelP"></select></li>
                   
                   <li><label for="multiplier">Nombre de passager: </label>
-                    <select id="multiplier" >
+                    <select id="multiplier" name="multiplier" >
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -158,29 +161,32 @@
                       <option value="6">6</option>
                       <option value="7">7</option>
                       <option value="8">8</option>
-                    </select><button onclick="multiply()">Confirmer</button></li>
+                    </select><button onclick="multiply()" type="button">Confirmer</button></li>
                   
                     <li><label for="pls">Prix final</label>
-                      <input type="text" id="pls" name="pls"> <input type="submit" value="Reserver"> </li>  
+                      <input type="text" id="pls" name="pls"> <input type="submit" name="aff" value="Reserver"> </li>    
+            
+                
           </ul>
          
-       
+        
   
   
         </div>
        
         <div class="columns4">
           <ul class="price">
+          <form action="#" method="post">
             <li class="header">Première classe</li>
-            <li class="grey"><form action="../payment/payement.php">
-              <label for="Date">Date:</label>
-              <input type="date" id="Date" name="Date"><br> </li>
+            <li class="grey">
+              <label for="date">Please enter a date:</label><br>
+              <input type="date" id="date" name="date" min="2024-04-27"><br> </li>
             <li> <label for="label6">Choisissez une option:</label>
               <select name="label6" id="label6" >
                 <option value="">--Sélectionnez une option--</option>
-                <option value="h">turkey airlines</option>
-                <option value="i">qatar airlines</option>
-                <option value="g">emirate airlines</option>
+                <option value="turkish airline">turkey airlines</option>
+                <option value="qatar airline">qatar airlines</option>
+                <option value="emirate airline">emirate airlines</option>
               </select></li>
               
             
@@ -188,7 +194,7 @@
               <li><label for="labelN">Prix vol:</label>
                 <select name="labelN" id="labelN"></select></li>
                   <li><label for="multiplier1">Nombre de passager: </label>
-                    <select id="multiplier1" >
+                    <select id="multiplier1" name="multiplier1">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -197,14 +203,55 @@
                       <option value="6">6</option>
                       <option value="7">7</option>
                       <option value="8">8</option>
-                    </select><button onclick="multiply1()">Confirmer</button></li>
+                    </select><button onclick="multiply1()" type="button">Confirmer</button></li>
                   
                     <li><label for="pls1">Prix final</label>
-                      <input type="text" id="pls1" name="pls1"> <input type="submit" value="Reserver"> </li>  
+                      <input type="text" id="pls1" name="pls1"> <input type="submit" name="pre" value="Reserver"> </li>  
             
           </ul>
          
+         
+        
+  
+  
+        </div>
        
+        <div class="columns4">
+         <ul class="price">
+            <li class="header">Première classe</li>
+            <li class="grey"><form action="#">
+              <label for="date">Please enter a date:</label><br>
+              <input type="date" id="date" name="date" min="2024-04-27"><br> </li>
+            <li> <label for="label6">Choisissez une option:</label>
+              <select name="label6" id="label6" >
+                <option value="">--Sélectionnez une option--</option>
+                <option value="turkey airlines">turkey airlines</option>
+                <option value="qatar airlines">qatar airlines</option>
+                <option value="emirate airlines">emirate airlines</option>
+              </select></li>
+              
+            
+                
+              <li><label for="labelN">Prix vol:</label>
+                <select name="labelN" id="labelN"></select></li>
+                  <li><label for="multiplier1">Nombre de passager: </label>
+                    <select id="multiplier1" name="multiplier1">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select><button onclick="multiply1()" type="button">Confirmer</button></li>
+                  
+                    <li><label for="pls1">Prix final</label>
+                      <input type="text" id="pls1" name="pls1"> <input type="submit" name="pre" value="Reserver"> </li>  
+            
+          </ul>
+         
+        
   
   
         </div>
@@ -233,18 +280,17 @@
         <div class="columns4">
           <ul class="price">
             <li class="header">3 étoiles</li>
-            
             <li class="grey"> <label for="firstSelect">Choisissez une option:</label>
               <select name="firstSelect" id="firstSelect" onchange="updateOptions(this.value)">
                 <option value="">--Sélectionnez une option--</option>
-                <option value="a">Hotel Emblem</option>
-                <option value="b">Residence Inn</option>
-                <option value="c">Mandarin Oriental</option>
+                <option value="a">Alpha Omega</option>
+                <option value="b">Ratchet</option>
+                <option value="c">Royal Hotel</option>
               </select></li>
               
             
                 
-              <li><label for="secondSelect">Prix:</label>
+              <li><label for="secondSelect">Prix (par jour):</label>
                 <select name="secondSelect" id="secondSelect"></select></li>
                   <li><label for="multiplier4">Nombre de personnes: </label>
                     <select id="multiplier4" >
@@ -256,7 +302,7 @@
                       <option value="6">6</option>
                       <option value="7">7</option>
                       <option value="8">8</option>
-                    </select><button onclick="multiply4()">Confirmer</button></li>
+                    </select><button onclick="multiply4()" type="button">Confirmer</button></li>
                   
                     <li><label for="pls8">Prix</label>
                       <input type="text" id="pls8" name="pls8">  </li> 
@@ -284,31 +330,32 @@
                           <option value="20">20</option>
                           <option value="21">21</option>
                           
-                        </select><button onclick="multiply7()">Confirmer</button></li>
+                        </select><button onclick="multiply7()" type="button">Confirmer</button></li>
                         <li><label for="dtt2">Prix final</label>
                           <input type="text" id="dtt2" name="dtt2">
                           <input type="submit" value="Reserver">
                        
 
+            
           </ul>
          
-       
+        
         </div>
       <div class="columns4">
         <ul class="price">
           <li class="header">4 étoiles</li>
           
-          <li class="grey"> <label for="label2">Choisissez une option:</label>
+          <li class="grey"><label for="label2">Choisissez une option:</label>
             <select name="label2" id="label2" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="d">Obsidian Sky</option>
-              <option value="e">Quaint Motel</option>
-              <option value="f">The Park Lane</option>
+              <option value="d">Azalea Garden Resort</option>
+              <option value="e">Alpenglow Luxury Hotel</option>
+              <option value="f">Arcane Mystic Inn</option>
             </select></li>
             
           
               
-            <li><label for="labelY">Prix(par jour):</label>
+            <li><label for="labelY">Prix (par jour):</label>
               <select name="labelY" id="labelY"></select></li>
                 <li><label for="multiplier5">Nombre de personnes: </label>
                   <select id="multiplier5" >
@@ -320,7 +367,7 @@
                     <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
-                  </select><button onclick="multiply5()">Confirmer</button></li>
+                  </select><button onclick="multiply5()" type="button">Confirmer</button></li>
                 
                   <li><label for="pls5">Prix </label>
                     <input type="text" id="pls5" name="pls5">  </li>  
@@ -349,14 +396,13 @@
                             <option value="20">20</option>
                             <option value="21">21</option>
                           
-                        </select><button onclick="multiply8()">Confirmer</button></li>
+                        </select><button onclick="multiply8()" type="button">Confirmer</button></li>
                         <li><label for="dtt4">Prix final</label>
                           <input type="text" id="dtt4" name="dtt4">
                           <input type="submit" value="Reserver">
         </ul>
        
      
-
 
       </div>
      
@@ -367,9 +413,9 @@
           <li class="grey"> <label for="label3">Choisissez une option:</label>
             <select name="label3" id="label3" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="h">South Shore Resort</option>
-              <option value="i">Olympus Hotel</option>
-              <option value="g">The Langham</option>
+              <option value="h">Amity Isle Hotel</option>
+              <option value="i">St Regis Hotels</option>
+              <option value="g"> Brontes Royal</option>
             </select></li>
             
           
@@ -386,7 +432,7 @@
                     <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
-                  </select><button onclick="multiply6()">Confirmer</button></li>
+                  </select><button onclick="multiply6()" type="button">Confirmer</button></li>
                 
                   <li><label for="pls6">Prix </label>
                     <input type="text" id="pls6" name="pls6">  </li>  
@@ -414,13 +460,15 @@
                           <option value="20">20</option>
                           <option value="21">21</option>
                         
-                      </select><button onclick="multiply9()">Confirmer</button></li>
+                      </select><button onclick="multiply9()" type="button">Confirmer</button></li>
                       <li><label for="dtt5">Prix final</label>
                         <input type="text" id="dtt6" name="dtt6">
                         <input type="submit" value="Reserver">
+          
         </ul>
        
       
+
 
       </div>
     
@@ -474,12 +522,12 @@
 } 
 function updateOptions(selectedOption) {
   var values = {
-    'a': 120,
+    'a': 250,
     'b': 220,
-    'c': 140
+    'c': 199
   };
   var secondSelect = document.getElementById('secondSelect');
-  secondSelect.innerHTML = ''; // Effacer les options existantes
+  secondSelect.innerHTML = ''; 
   if (values[selectedOption]) {
     var option = document.createElement('option');
     option.value = values[selectedOption];
@@ -490,38 +538,38 @@ function updateOptions(selectedOption) {
 document.getElementById('label2').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelY');
-    if (value === 'd') labelY.innerHTML = '<option value="200">200</option>';
-    else if (value === 'e') labelY.innerHTML = '<option value="270">270</option>';
-    else if (value === 'f') labelY.innerHTML = '<option value="300">300</option>';
+    if (value === 'd') labelY.innerHTML = '<option value="450">450</option>';
+    else if (value === 'e') labelY.innerHTML = '<option value="770">770</option>';
+    else if (value === 'f') labelY.innerHTML = '<option value="559">590</option>';
   });
 document.getElementById('label3').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelZ');
-    if (value === 'g') labelZ.innerHTML = '<option value="750">750</option>';
-    else if (value === 'h') labelZ.innerHTML = '<option value="970">970</option>';
-    else if (value === 'i') labelZ.innerHTML = '<option value="800">800</option>';
+    if (value === 'g') labelZ.innerHTML = '<option value="850">850</option>';
+    else if (value === 'h') labelZ.innerHTML = '<option value="870">870</option>';
+    else if (value === 'i') labelZ.innerHTML = '<option value="900">900</option>';
   });
   window.onload = function() {document.getElementById('label4').addEventListener('change', function() {
     var value = this.value;
     var labelY = document.getElementById('labelP');
-    if (value === 'd') labelP.innerHTML = '<option value="2040">2040</option>';
-    else if (value === 'e') labelP.innerHTML = '<option value="1900">1900</option>';
-    else if (value === 'f') labelP.innerHTML = '<option value="2100">2100</option>';
+    if (value === 'turkish airline') labelP.innerHTML = '<option value="2040">2040</option>';
+    else if (value === 'qatar airline') labelP.innerHTML = '<option value="1900">1900</option>';
+    else if (value === 'emirate airline') labelP.innerHTML = '<option value="2100">2100</option>';
   });
 }
 document.getElementById('label5').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelM');
-    if (value === 'a') labelM.innerHTML = '<option value="1250">1250</option>';
-    else if (value === 'b') labelM.innerHTML = '<option value="1170">1170</option>';
-    else if (value === 'c') labelM.innerHTML = '<option value="1359">1359</option>';
+    if (value === 'turkish airline') labelM.innerHTML = '<option value="1250">1250</option>';
+    else if (value === 'qatar airline') labelM.innerHTML = '<option value="1170">1170</option>';
+    else if (value === 'emirate airline') labelM.innerHTML = '<option value="1359">1359</option>';
   });
   document.getElementById('label6').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelN');
-    if (value === 'g') labelN.innerHTML = '<option value="3400">3400</option>';
-    else if (value === 'h') labelN.innerHTML = '<option value="3600">3600</option>';
-    else if (value === 'i') labelN.innerHTML = '<option value="4000">4000</option>';
+    if (value === 'turkish airline') labelN.innerHTML = '<option value="3400">3400</option>';
+    else if (value === 'qatar airline') labelN.innerHTML = '<option value="3600">3600</option>';
+    else if (value === 'emirate airline') labelN.innerHTML = '<option value="4000">4000</option>';
   });
   function multiply() {
     var number = document.getElementById("labelP").value;
