@@ -284,7 +284,7 @@ if(isset($_POST['pre'])){
                     <li><label for="pls8">Prix</label>
                       <input type="text" id="pls8" name="pls8">  </li> 
                       <li><label for="dtt">Durée: </label>
-                        <select id="dtt" >
+                        <select id="dtt" name="dtt">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>

@@ -1,5 +1,8 @@
 <?php
 include "../reserve/reservation_vol.php";
+include"../reserve/reservation_hotel.php";
+
+
 if(isset($_POST['eco'])){
   $dest = 'moscou';
   economique("$dest");
@@ -11,6 +14,9 @@ if(isset($_POST['aff'])){
 if(isset($_POST['pre'])){
   $dest = 'moscou';
   premiere("$dest");
+}
+if(isset($_POST['trois'])){
+  trois();
 }
 ?>
 <!DOCTYPE html>
@@ -251,6 +257,7 @@ if(isset($_POST['pre'])){
         <div class="row">
         <div class="columns4">
           <ul class="price">
+            <form action="#" method="post">
             <li class="header">3 étoiles</li>
             
             <li class="grey"> <label for="firstSelect">Choisissez une option:</label>
@@ -266,7 +273,7 @@ if(isset($_POST['pre'])){
               <li><label for="secondSelect">Prix (par jour):</label>
                 <select name="secondSelect" id="secondSelect"></select></li>
                   <li><label for="multiplier4">Nombre de personnes: </label>
-                    <select id="multiplier4" >
+                    <select id="multiplier4" name="multiplier4">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -280,7 +287,7 @@ if(isset($_POST['pre'])){
                     <li><label for="pls8">Prix</label>
                       <input type="text" id="pls8" name="pls8">  </li> 
                       <li><label for="dtt">Durée: </label>
-                        <select id="dtt" >
+                        <select id="dtt" name="dtt">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -306,21 +313,23 @@ if(isset($_POST['pre'])){
                         </select><button onclick="multiply7()" type="button">Confirmer</button></li>
                         <li><label for="dtt2">Prix final</label>
                           <input type="text" id="dtt2" name="dtt2">
-                          <input type="submit" value="Reserver">
+                          <input type="submit" value="Reserver" name="trois">
+                     </form> 
           </ul>
          
        
         </div>
       <div class="columns4">
         <ul class="price">
+          <form action="#" method="post">
           <li class="header">4 étoiles</li>
           
           <li class="grey"> <label for="label2">Choisissez une option:</label>
             <select name="label2" id="label2" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="d">Residence Rose</option>
-              <option value="e">Howtard</option>
-              <option value="f">Cyclops Plaza</option>
+              <option value="Residence Rose">Residence Rose</option>
+              <option value="Howtard">Howtard</option>
+              <option value="Cyclops Plaza">Cyclops Plaza</option>
             </select></li>
             
           
@@ -369,7 +378,7 @@ if(isset($_POST['pre'])){
                         </select><button onclick="multiply8()" type="button">Confirmer</button></li>
                         <li><label for="dtt4">Prix final</label>
                           <input type="text" id="dtt4" name="dtt4">
-                          <input type="submit" value="Reserver">
+                          <input type="submit" value="Reserver" name="quatre">
           
         </ul>
        
@@ -379,14 +388,15 @@ if(isset($_POST['pre'])){
      
       <div class="columns4">
         <ul class="price">
+          <form action="#" method="post">
           <li class="header">5 étoiles</li>
           
           <li class="grey"> <label for="label3">Choisissez une option:</label>
             <select name="label3" id="label3" >
               <option value="">--Sélectionnez une option--</option>
-              <option value="h">Borvo Grand Suites</option>
-              <option value="i">Symmertra Hotels</option>
-              <option value="g">Junk Bunk</option>
+              <option value="Borvo Grand Suites">Borvo Grand Suites</option>
+              <option value="Symmertra Hotels">Symmertra Hotels</option>
+              <option value="Junk Bunk">Junk Bunk</option>
             </select></li>
             
           
@@ -434,7 +444,8 @@ if(isset($_POST['pre'])){
                       </select><button onclick="multiply9()"  type="button">Confirmer</button></li>
                       <li><label for="dtt5">Prix final</label>
                         <input type="text" id="dtt6" name="dtt6">
-                        <input type="submit" value="Reserver">
+                        <input type="submit" value="Reserver" name="cinq">
+</form>
         </ul>
        
       
@@ -491,9 +502,9 @@ if(isset($_POST['pre'])){
 } 
 function updateOptions(selectedOption) {
   var values = {
-    'a': 120,
-    'b': 210,
-    'c': 199
+    'Cronus Luxury Plaza': 120,
+    'Lifeweaver': 210,
+    'Genji Hotel': 199
   };
   var secondSelect = document.getElementById('secondSelect');
   secondSelect.innerHTML = ''; // Effacer les options existantes
@@ -507,16 +518,16 @@ function updateOptions(selectedOption) {
 document.getElementById('label2').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelY');
-    if (value === 'd') labelY.innerHTML = '<option value="200">200</option>';
-    else if (value === 'e') labelY.innerHTML = '<option value="220">220</option>';
-    else if (value === 'f') labelY.innerHTML = '<option value="199">199</option>';
+    if (value === 'Residence Rose') labelY.innerHTML = '<option value="200">200</option>';
+    else if (value === 'Howtard') labelY.innerHTML = '<option value="220">220</option>';
+    else if (value === 'Cyclops Plaza') labelY.innerHTML = '<option value="199">199</option>';
   });
 document.getElementById('label3').addEventListener('change', function() {
     var value = this.value;
     var labelZ = document.getElementById('labelZ');
-    if (value === 'g') labelZ.innerHTML = '<option value="800">800</option>';
-    else if (value === 'h') labelZ.innerHTML = '<option value="870">870</option>';
-    else if (value === 'i') labelZ.innerHTML = '<option value="900">900</option>';
+    if (value === 'Borvo Grand Suites') labelZ.innerHTML = '<option value="800">800</option>';
+    else if (value === 'Symmertra Hotels') labelZ.innerHTML = '<option value="870">870</option>';
+    else if (value === 'Junk Bunk') labelZ.innerHTML = '<option value="900">900</option>';
   });
   window.onload = function() {document.getElementById('label4').addEventListener('change', function() {
     var value = this.value;
